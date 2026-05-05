@@ -22,13 +22,13 @@ rdata <= 4'b0000;
 
 2. Write Operation
 When:
-we = 1
+we = 1;
 Data is written into selected address:
 R_mem[addr] <= wdata;
 
 3. Read Operation
 When:
-we = 0
+we = 0;
 Stored data is read from memory:
 rdata <= R_mem[addr];
 
@@ -45,5 +45,5 @@ Reads data from all memory locations to verify correct storage.
 Step 4: Reset Verification
 Applies reset again and confirms memory is cleared.
 
-🛠 Tools Used
+🛠 Tools Used:
 cadence Xelium
