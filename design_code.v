@@ -1,7 +1,7 @@
 module teamFSM (
     input clk,
     input rst,    
-    input wr_en,      
+    input we,      
     input [1:0]  addr,     
     input [3:0]  wdata,    
     output reg  [3:0]  rdata 
@@ -17,10 +17,10 @@ module teamFSM (
             rdata <= 4'b0000;
         end
       else if (we)begin
-            mem[addr] <= wdata;
+            R_mem[addr] <= wdata;
       end
         else begin
-            rdata <= mem[addr];
+            rdata <= R_mem[addr];
         end
     end
 endmodule
